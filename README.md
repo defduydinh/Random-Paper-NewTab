@@ -1,8 +1,9 @@
-# Random-Paper-NewTab
+<title># Random-Paper-NewTab</title>
 My own custom script for Super Evil Tab (a chrome extension)
 
-Feature:
+<p>Feature: </p>
+  <ul>
+  <li>Background button: change to a random background from a given list of wallpapers</li>
 
-  Background button: change to a random background from a given list of wallpapers
-
-  Time: Real time and date
+  <li>Time: Real time and date</li>
+  </ul>
