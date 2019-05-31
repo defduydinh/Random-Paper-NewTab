@@ -1,0 +1,22 @@
+//List of fav wallpapers
+var wallpap = [
+    "https://i.imgur.com/vHqpN6W.jpg",
+    "https://images3.alphacoders.com/841/thumb-1920-841249.jpg"
+];
+
+var randomPaper = wallpap[Math.floor(Math.random()*wallpap.length)];
+var oldPaper;
+
+function changePaper(){
+    randomPaper = wallpap[Math.floor(Math.random()*wallpap.length)];
+    
+    if(randomPaper != oldPaper){
+        oldPaper = randomPaper;
+        document.body.style.backgroundImage= "url(" + randomPaper + ")";
+    }else{
+        changePaper();
+    }
+    //console.log(randomPaper);
+}
+
+window.onload = document.body.style.backgroundImage= "url(" + randomPaper + ")";
