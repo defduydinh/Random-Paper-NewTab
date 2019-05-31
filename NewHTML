@@ -16,11 +16,13 @@
         <div id="colPaper">
             <button id="backChange" type="button" onclick="changePaper()">Background</button>
         </div>
-        <div id="colEmpt">
+        <div id="realDate">
             
         </div>
-        <div id="realTime" onload="startClock">
+        <div id="realTime">
             
         </div>
+        
+        
     </div>
 </body>
