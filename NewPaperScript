@@ -1,7 +1,64 @@
+//Start clock on newtab
+function startClock(){
+    var today = new Date();
+    var hour = today.getHours();
+    var minute = today.getMinutes();
+    var sec = today.getSeconds();
+    var date = today.getDate();
+    var month = today.getMonth() + 1;
+    var year = today.getYear() - 100;
+    minute = checkTime(minute);
+    sec = checkTime(sec);
+    document.getElementById('realTime').innerHTML = hour + ":" + minute + "<font size=\"5\">:" + sec + "</font>";
+    document.getElementById('realDate').innerHTML = month + "/" + date + "/" + year;
+    var t = setTimeout(startClock, 500);
+}
+function checkTime(i) {
+  if (i < 10){
+      i = "0" + i;
+  }
+  return i;
+}
+
+window.onload = startClock();
+
+
 //List of fav wallpapers
 var wallpap = [
     "https://i.imgur.com/vHqpN6W.jpg",
-    "https://images3.alphacoders.com/841/thumb-1920-841249.jpg"
+    "https://images3.alphacoders.com/841/841249.jpg",
+    "https://images8.alphacoders.com/876/876579.jpg",
+    "https://images5.alphacoders.com/960/960580.png",
+    "https://images.alphacoders.com/786/786887.png",
+    "https://images6.alphacoders.com/972/972850.png",
+    "https://images7.alphacoders.com/841/841907.jpg",
+    "https://images.alphacoders.com/764/764352.png",
+    "https://images2.alphacoders.com/821/821279.png",
+    "https://images.alphacoders.com/719/719514.png",
+    "https://images4.alphacoders.com/874/874279.png",
+    "https://images2.alphacoders.com/876/876532.png",
+    "https://images3.alphacoders.com/998/998207.jpg",
+    "https://images5.alphacoders.com/943/943137.jpg",
+    "https://images.alphacoders.com/960/960579.png",
+    "https://images7.alphacoders.com/946/946531.jpg",
+    "https://images.alphacoders.com/941/941138.jpg",
+    "https://images7.alphacoders.com/101/1010876.jpg",
+    "https://images8.alphacoders.com/982/982704.jpg",
+    "https://images8.alphacoders.com/922/922332.jpg",
+    "https://images7.alphacoders.com/924/924055.jpg",
+    "https://images.alphacoders.com/902/902852.jpg",
+    "https://images.alphacoders.com/895/895435.png",
+    "https://images3.alphacoders.com/915/915439.jpg",
+    "https://images3.alphacoders.com/922/922721.png",
+    "https://images6.alphacoders.com/891/891745.jpg",
+    "https://images2.alphacoders.com/916/916759.jpg",
+    "https://images7.alphacoders.com/924/924570.jpg",
+    "https://images7.alphacoders.com/963/963691.jpg",
+    "https://images.alphacoders.com/998/998224.jpg",
+    "https://images6.alphacoders.com/987/987290.png",
+    "https://i.imgur.com/2h5eKuS.png",
+    "https://i.imgur.com/o1E7Gz3.jpg",
+    "https://i.imgur.com/6XxLQkY.gif"
 ];
 
 var randomPaper = wallpap[Math.floor(Math.random()*wallpap.length)];
@@ -13,10 +70,10 @@ function changePaper(){
     if(randomPaper != oldPaper){
         oldPaper = randomPaper;
         document.body.style.backgroundImage= "url(" + randomPaper + ")";
+        
     }else{
         changePaper();
     }
-    //console.log(randomPaper);
 }
 
 window.onload = document.body.style.backgroundImage= "url(" + randomPaper + ")";

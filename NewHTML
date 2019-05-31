@@ -1,7 +1,4 @@
-<!--
-Setup default background setting for wallpaper to rest.
-Button will change backgroundImage in CSS.
--->
+
 <style type="text/css">
     <!--
         body{
@@ -15,5 +12,17 @@ Button will change backgroundImage in CSS.
 
 
 <body>
-    <button type="button" onclick="changePaper()">Background</button>
+    <div class="row">
+        <div id="colPaper">
+            <button id="backChange" type="button" onclick="changePaper()">Background</button>
+        </div>
+        <div id="realDate">
+            
+        </div>
+        <div id="realTime">
+            
+        </div>
+        
+        
+    </div>
 </body>
