@@ -1,0 +1,19 @@
+<!--
+Setup default background setting for wallpaper to rest.
+Button will change backgroundImage in CSS.
+-->
+<style type="text/css">
+    <!--
+        body{
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+    -->
+</style>
+
+
+<body>
+    <button type="button" onclick="changePaper()">Background</button>
+</body>
